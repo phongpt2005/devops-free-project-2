@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: devops-demo
+    env: node
+    plan: free
+    repo: https://github.com/phongpt2005/devops-free-project-2
+    branch: main
+    buildCommand: npm install
+    startCommand: node app.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
